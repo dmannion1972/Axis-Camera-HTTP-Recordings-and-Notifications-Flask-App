@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Videos</title>
+</head>
+<body>
+    <h1>Uploaded Videos</h1>
+    {% for video in video_files %}
+        <video width="320" height="240" controls>
+            <source src="{{ url_for('static', filename='uploads/' + video) }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+    {% endfor %}
+</body>
+</html>
+
+
+
